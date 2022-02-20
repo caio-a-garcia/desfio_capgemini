@@ -86,11 +86,11 @@ Copie o código abaixo, cole no repl e execute.
 
 Com isso o ambiente terá três funções definidas que resolvem os três desafios descritos.
 
- - Para o primeiro desafio, digite no REPL '(mostrar-escada <n>)', substituindo <n> por um numero inteiro a sua escolha (funciona para números menores que a largura da janela do ambiente de execução em caracteres).
+ - Para o primeiro desafio, digite no REPL '(mostrar-escada \<n\>)', substituindo <n> por um numero inteiro a sua escolha (funciona para números menores que a largura da janela do ambiente de execução em caracteres).
 
- - Para o segundo desafio, use a função '(segura <string>)', substituindo <string> por qualquer sequencia de caracteres "entre aspas". A função checa apenas o tamanho da string como ilustrado nos exemplos do desafio. Checagem das outras regras de segurança discutidas ficaram para desenvolvimento futuro.
+ - Para o segundo desafio, use a função '(segura \<string\>)', substituindo <string> por qualquer sequencia de caracteres "entre aspas". A função checa apenas o tamanho da string como ilustrado nos exemplos do desafio. Checagem das outras regras de segurança discutidas ficaram para desenvolvimento futuro.
 
- - Para o terceiro desafio use a função '(anagrama <string>)' substituindo <string> da mesma forma que no desafio anterior.
+ - Para o terceiro desafio use a função '(anagrama \<string\>)' substituindo <string> da mesma forma que no desafio anterior.
 
 ## Próximos passos
 
