@@ -5,9 +5,5 @@
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.10.3"]]
   :repl-options {:init-ns desafio-capgemini.core}
-  
-  ;;:source-paths ["src/desafio_capgemini"]
-
-  ;;:main desafio_capgemini.core
-  
-  )
+  :main desafio-capgemini.core
+    )

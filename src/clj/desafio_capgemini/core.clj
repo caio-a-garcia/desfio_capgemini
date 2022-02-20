@@ -10,7 +10,7 @@
       nil
       (recur
        (inc degraus)
-       (Dec espacos)))))
+       (dec espacos)))))
 
 (defn segura
   "Desafio 2. Recebe uma string e retorna quantos caracteres devem ser adicionados para que ela tenha ao menos 6 caracteres."
@@ -19,6 +19,14 @@
     (if (> diferenca 0)
       diferenca
       0)))
+
+(defn equivalente?
+  "Checa se duas strings contêm os mesmos characteres, o mesmo número de vezes cada, em qualquer ordem."
+  [substring teste]
+  (= (->> (split substring #"")
+          (sort))
+     (->> (split teste #"")
+          (sort))))
 
 (defn anagrama
   "Desafio 3. Checa cada substring do argumento passado contra todas as outras. Usa o predicado equivalente? para conferir se dois argumentos contituem um anagrama como descrito no desafio."
@@ -43,31 +51,20 @@
                             total 0]
                        (if (= (count palavra) (- (+ inicio tamanho counter) 1))
                          total
-                         (let [teste (subs palavra (+ inicio counter) (+ inicio tamanho counter))]
-                           #_(println "Teste: " teste)
+                         (let [teste (subs palavra
+                                           (+ inicio counter)
+                                           (+ inicio tamanho counter))]
                            (if (equivalente? substring teste)
-                             (do
-                               #_(println "teste: " teste " substring: " substring)
-                               (recur
-                                inicio
-                                (inc counter)
-                                (inc total)))
-                             (do
-                               #_(println "Nao pontuou. teste: " teste " substring: " substring)
-                               (recur
-                                inicio
-                                (inc counter)
-                                total)))))))))))
+                             (recur
+                              inicio
+                              (inc counter)
+                              (inc total))
+                             (recur
+                              inicio
+                              (inc counter)
+                              total))))))))))
          (inc tamanho)))))
 
-(defn equivalente?
-  "Checa se duas strings contêm os mesmos characteres, o mesmo número de vezes cada, em qualquer ordem."
-  [substring teste]
-  (= (->> (split substring #"")
-          (sort))
-     (->> (split teste #"")
-          (sort))))
-
-#_(defn -main [function argument]
-  (if (not (nil? (some #{function} '("escada" "segura" "anagrama")))))
-  (function argument))
+(defn -main [function argument]
+  #_(if (not (nil? (some #{function} '("escada" "segura" "anagrama")))))
+  (escada 9))
