@@ -4,13 +4,21 @@
 (defn escada
   "Desafio 1. Recebe um argumento n inteiro e retorna uma escada com n degraus no caractere *"
   [n]
-  (loop [degraus 1 espacos (- n 1)]
-    (println (join (repeat espacos " ")) (join (repeat degraus "*")))
-    (if (zero? espacos)
-      nil
-      (recur
-       (inc degraus)
-       (dec espacos)))))
+  (loop [degraus 1 espacos (- n 1) escada ""]
+    (let [escada (str escada
+                      (join (repeat espacos " "))
+                      (join (repeat degraus "*"))
+                      "\n")]
+      (if (zero? espacos)
+        escada
+        (recur
+         (inc degraus)
+         (dec espacos)
+         escada)))))
+
+(defn mostrar-escada
+  [n]
+  (println (escada n)))
 
 (defn segura
   "Desafio 2. Recebe uma string e retorna quantos caracteres devem ser adicionados para que ela tenha ao menos 6 caracteres."

@@ -14,15 +14,22 @@ Copie o código abaixo, cole no repl e execute.
 (defn escada
   "Desafio 1. Recebe um argumento n inteiro e retorna uma escada com n degraus no caractere *"
   [n]
-  (loop [degraus 1 espacos (- n 1)]
-    (println (clojure.string/join (repeat espacos " "))
-             (clojure.string/join (repeat degraus "*")))
-    (if (zero? espacos)
-      nil
-      (recur
-       (inc degraus)
-       (dec espacos)))))
+  (loop [degraus 1 espacos (- n 1) escada ""]
+    (let [escada (str escada
+                      (clojure.string/join (repeat espacos " "))
+                      (join (repeat degraus "*"))
+                      "\n")]
+      (if (zero? espacos)
+        escada
+        (recur
+         (inc degraus)
+         (dec espacos)
+         escada)))))
 
+(defn mostrar-escada
+  [n]
+  (println (escada n)))
+  
 (defn segura
   "Desafio 2. Recebe uma string e retorna quantos caracteres devem ser adicionados para que ela tenha ao menos 6 caracteres."
   [senha]
@@ -77,9 +84,9 @@ Copie o código abaixo, cole no repl e execute.
          (inc tamanho)))))
 ```
 
-Com isso o ambiente terá tres funções definidas que resolvem os tres desafios descritos.
+Com isso o ambiente terá três funções definidas que resolvem os três desafios descritos.
 
- - Para o primeiro desafio, digite no REPL '(escada <n>)', substituindo <n> por um numero inteiro a sua escolha (funciona para números menores que a largura da janela do ambiente de execução em caracteres).
+ - Para o primeiro desafio, digite no REPL '(mostrar-escada <n>)', substituindo <n> por um numero inteiro a sua escolha (funciona para números menores que a largura da janela do ambiente de execução em caracteres).
 
  - Para o segundo desafio, use a função '(segura <string>)', substituindo <string> por qualquer sequencia de caracteres "entre aspas". A função checa apenas o tamanho da string como ilustrado nos exemplos do desafio. Checagem das outras regras de segurança discutidas ficaram para desenvolvimento futuro.
 
@@ -87,7 +94,7 @@ Com isso o ambiente terá tres funções definidas que resolvem os tres desafios
 
 ## Próximos passos
 
-Pendente implementar testes unitários e uma forma de compilar o projeto como um todo.
+Pendente implementar uma forma de compilar o projeto como um todo. Então rodar testes automaticamente.
 
 Extra seria complementar as funções dos desafios. Por exemplo, conferir as outras condições para uma senha segura.
 
