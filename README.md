@@ -1,16 +1,16 @@
-# desafio_capgemini
+# Desafio Academia Capgemini
 
-Implementação de soluções para o desafio da Academia Capgemini na linguagem Clojure.
+ImplementaÃ§Ã£o de soluÃ§Ãµes para o desafio da Academia Capgemini na linguagem Clojure.
 
 ## Como rodar
 
-Se você ainda não tem um ambiente de desenvolvimento Clojure, instale o Leiningen seguindo as [instruções](https://leiningen.org) no site oficial.
+Se vocÃª ainda nÃ£o tem um ambiente de desenvolvimento Clojure, instale o Leiningen seguindo as [instruÃ§Ãµes](https://leiningen.org) no site oficial.
 
-Com o ambiente pronto acesse o REPL. Para fazer isso com o Leiningen, vá à linha de comando e dê o comando `lein repl`.
+Com o ambiente pronto acesse o REPL. Para fazer isso com o Leiningen, vÃ¡ Ã  linha de comando e dÃª o comando `lein repl`.
 
-Copie o código abaixo, cole no repl e execute.
+Copie o cÃ³digo abaixo, cole no repl e execute.
 
-'''
+```clojure
 (defn escada
   "Desafio 1. Recebe um argumento n inteiro e retorna uma escada com n degraus no caractere *"
   [n]
@@ -32,7 +32,7 @@ Copie o código abaixo, cole no repl e execute.
       0)))
 
 (defn equivalente?
-  "Checa se duas strings contêm os mesmos characteres, o mesmo número de vezes cada, em qualquer ordem."
+  "Checa se duas strings contÃªm os mesmos characteres, o mesmo nÃºmero de vezes cada, em qualquer ordem."
   [substring teste]
   (= (->> (clojure.string/split substring #"")
           (sort))
@@ -75,25 +75,25 @@ Copie o código abaixo, cole no repl e execute.
                               (inc counter)
                               total))))))))))
          (inc tamanho)))))
-'''
+```
 
-Com isso o ambiente terá tres funções definidas que resolvem os tres desafios descritos.
+Com isso o ambiente terÃ¡ tres funÃ§Ãµes definidas que resolvem os tres desafios descritos.
 
-Para o primeiro desafio, digite no REPL '(escada <n>)', substituindo <n> por um numero inteiro a sua escolha (funciona para números menores que a largura da janela do ambiente de execução em caracteres).
+ - Para o primeiro desafio, digite no REPL '(escada <n>)', substituindo <n> por um numero inteiro a sua escolha (funciona para nÃºmeros menores que a largura da janela do ambiente de execuÃ§Ã£o em caracteres).
 
-Para o segundo desafio, use a função '(segura <string>)', substituindo <string> por qualquer sequencia de caracteres "entre aspas". A função checa apenas o tamanho da string como ilustrado nos exemplos do desafio. Checagem das outras regras de segurança discutidas ficaram para desenvolvimento futuro.
+ - Para o segundo desafio, use a funÃ§Ã£o '(segura <string>)', substituindo <string> por qualquer sequencia de caracteres "entre aspas". A funÃ§Ã£o checa apenas o tamanho da string como ilustrado nos exemplos do desafio. Checagem das outras regras de seguranÃ§a discutidas ficaram para desenvolvimento futuro.
 
-Para o terceiro desafio use a função '(anagrama <string>)' substituindo <string> da mesma forma que no desafio anterior.
+ - Para o terceiro desafio use a funÃ§Ã£o '(anagrama <string>)' substituindo <string> da mesma forma que no desafio anterior.
 
-## Proximos passos
+## PrÃ³ximos passos
 
-Pendente implementar testes unitários e uma forma de compilar o projeto como um todo.
+Pendente implementar testes unitÃ¡rios e uma forma de compilar o projeto como um todo.
 
-Extra seria complementar as funções dos desafios. Por exemplo, conferir as outras condições para uma senha segura.
+Extra seria complementar as funÃ§Ãµes dos desafios. Por exemplo, conferir as outras condiÃ§Ãµes para uma senha segura.
 
 ## License
 
-Copyright Â© 2022
+Copyright Ã‚Â© 2022
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at
