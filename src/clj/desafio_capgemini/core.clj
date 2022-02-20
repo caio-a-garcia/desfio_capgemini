@@ -67,3 +67,7 @@
           (sort))
      (->> (split teste #"")
           (sort))))
+
+#_(defn -main [function argument]
+  (if (not (nil? (some #{function} '("escada" "segura" "anagrama")))))
+  (function argument))

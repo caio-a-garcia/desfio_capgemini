@@ -1,10 +1,10 @@
 # desafio_capgemini
 
-A Clojure library designed to ... well, that part is up to you.
+Implementação de soluções para o desafio da Academia Capgemini na linguagem Clojure.
 
-## Usage
+## Como rodar
 
-FIXME
+
 
 ## License
 
